@@ -1,0 +1,47 @@
+
+#include <iostream>
+using namespace std;
+
+class Employee
+{
+public:
+    int employeeID;
+    string name;
+    string department;
+    double salary;
+    
+    void setDetails()
+    {
+        cout << "Enter Employee ID: "<<endl;
+        cin >> employeeID;
+
+        cout << "Enter Name: "<<endl;
+        cin >> name;
+
+        cout << "Enter Department: "<<endl;
+        cin >> department;
+
+        cout << "Enter Salary: "<<endl;
+        cin >> salary;
+    }
+    void viewDetails()
+    {
+        cout << "\n--- Employee Details ---" << endl;
+        cout << "Employee ID: " << employeeID << endl;
+        cout << "Name: " << name << endl;
+        cout << "Department: " << department << endl;
+        cout << "Salary: " << salary << endl;
+    }
+};
+
+int main()
+{
+    Employee emp;
+
+    emp.setDetails();
+
+    cout << "\nAuthorized Staff: Viewing Employee Information\n";
+    emp.viewDetails();
+
+    return 0;
+}
