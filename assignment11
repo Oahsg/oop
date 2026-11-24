@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+template<typename T>
+void swapValues(T& a,T& b) {
+    T temp = a;
+    a = b;
+    b = temp;
+}
+
+int main() {
+    int empId1 = 9804, empId2 = 8830;
+    swapValues(empId1, empId2);
+    cout << empId1 << " " << empId2 << "\n";
+
+    string roomA = "A-9804", roomB = "C-78546";
+    swapValues(roomA, roomB);
+    cout << roomA << " " << roomB << "\n";
+
+    char priority1 = 'H', priority2 = 'L';
+    swapValues(priority1, priority2);
+    cout << priority1 << " " << priority2 << "\n";
+
+    return 0;
+
+}
